@@ -55,6 +55,18 @@
             <h2 style="border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px;">Featured Projects</h2>
 
             <div class="projects-grid">
+
+                <div class="project-card">
+                    <img src="img/FIFA.jpg" alt="Football Match Predictor — FIFA World Cup 2026" class="project-img">
+                    <h3>Football Match Predictor — FIFA World Cup 2026</h3>
+                    <span class="tech-stack">Python • Pandas • XGBoost • Streamlit • Kaggle API</span>
+                    <p><strong>Challenge:</strong> Predicting the outcome of international football matches is inherently difficult due to the variability in team composition, tournament context, and the limited number of games each national team plays per year. Traditional win/loss records fail to capture the true strength gap between teams or how "in form" a squad is at any given moment, making it hard to generate reliable probability estimates for upcoming fixtures.</p>                    
+                    <p><strong>Solution:</strong> Built an end-to-end predictive system connected directly to the Kaggle API, which downloads and processes a live dataset of over 49,000 international matches from 1872 to 2026, updated after every game played. Implemented a dynamic ELO rating system with tournament-weight factors (World Cup games worth more than friendlies) and a goal-difference multiplier to avoid inflating ratings on blowout wins. Engineered 20+ features per match including recent form over the last 10 games, 
+                    head-to-head historical win rates, home advantage adjustments, and neutral venue flags — critical for World Cup scenarios where neither team plays on home soil. Trained an XGBoost classifier for win/draw/loss probabilities and two separate Poisson regressors to predict expected goals (xG) for each team. Deployed the complete pipeline as an interactive Streamlit web app where users can select any two national teams, configure the tournament type, and receive full probability breakdowns with contextual explanations.</p>                  
+                    <p><strong>Impact:</strong> The model produces calibrated match probabilities and xG estimates for any of the 200+ national teams in the dataset. The ELO ranking table reflects current team strength based on all recent results, making it a useful reference beyond individual predictions. Neutral-venue logic ensures World Cup predictions are not artificially skewed toward the team listed as "home," which is a common flaw in simpler models. The system retrains automatically on the most up-to-date data each session, keeping predictions current throughout the 2026 tournament.</p>    
+                    <a href="https://github.com/Carlos-1235/football_predictor" target="_blank" class="btn-link"><i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
                 
                 <div class="project-card">
                     <img src="img/avocado.jpg" alt="Avocado Market Analysis" class="project-img">
